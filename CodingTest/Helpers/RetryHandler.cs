@@ -8,6 +8,7 @@ namespace CodingTest.Helpers
 {
     public static class RetryHandler
     {
+        // Retry Helper
         public static T Retry<T>(Func<T> action, int retryCount = 0)
         {
             PolicyResult<T> policyResult = Policy

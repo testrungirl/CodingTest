@@ -15,7 +15,7 @@ namespace CodingTest.Models
         public virtual Payment Payment { get; set; }
         public States  State { get; set; }
     }
-
+    //Possible Payment States with foreign key to Payment Entity
     public enum States
     {
         NotStarted,

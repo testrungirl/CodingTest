@@ -44,6 +44,8 @@ namespace CodingTest
             services.AddTransient<ICheapPaymentGateway, CheapPaymentGateway>();
             services.AddTransient<IExpensivePaymentGateway, ExpensivePaymentGateway>();
             services.AddTransient<ITransactionService, TransactionService>();
+
+            //Disabling default validation so I can do Model Validation myself
             services.Configure<ApiBehaviorOptions>(options =>
             {
                 options.SuppressModelStateInvalidFilter = true;
@@ -84,6 +86,7 @@ namespace CodingTest
             });
         }
 
+        // Adding swagger
         private void AddSwaggerGen(IServiceCollection services)
         {
             services.AddSwaggerGen(c =>

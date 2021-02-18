@@ -36,8 +36,10 @@ namespace CodingTest.Services
                 }
                 else if (model.Amount > 20 && model.Amount <= 500)
                 {
+                    //if expensive payment gateway failes
                     if (_expensivePaymentGateway.HandleTransaction(model) == Models.States.Failed)
                     {
+                        //using Custom Polly Class to retry only once
                         states = RetryHandler.Retry(() => _cheapPaymentGateway.HandleTransaction(model), 0);
 
                     }
@@ -46,6 +48,8 @@ namespace CodingTest.Services
                 }
                 else if (model.Amount > 500)
                 {
+                    //using Custom Polly Class to retry x3
+
                     states = RetryHandler.Retry(() => _expensivePaymentGateway.HandleTransaction(model), 3);
 
                 }

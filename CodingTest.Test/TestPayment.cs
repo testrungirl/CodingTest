@@ -8,6 +8,7 @@ namespace CodingTest.Test
     [TestClass]
     public class TestPayment
     {
+
         public ITransactionService _transactionservice { get; }
         public IExpensivePaymentGateway _expensivePaymentGateway { get; }
         public ICheapPaymentGateway _cheapPaymentGateway { get; }
@@ -18,7 +19,7 @@ namespace CodingTest.Test
             _cheapPaymentGateway = cheapPaymentGateway;
             _expensivePaymentGateway = expensivePaymentGateway;
         }
-
+        
         [TestMethod]
         public void IsPaymentProcessing()
         {

@@ -10,7 +10,7 @@ namespace CodingTest.Services
 {
     public class ExpensivePaymentGateway : IExpensivePaymentGateway
     {
-      
+      // Simulated Response using random behaviour
         public States HandleTransaction(PaymentDto model)
         {
             var state = RetryHandler.GetRandomEnum<States>();

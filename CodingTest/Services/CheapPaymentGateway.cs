@@ -10,6 +10,8 @@ namespace CodingTest.Services
 {
     public class CheapPaymentGateway : ICheapPaymentGateway
     {
+        // Simulated Response using random behaviour
+
         public States HandleTransaction(PaymentDto model)
         {
             var state = RetryHandler.GetRandomEnum<States>();

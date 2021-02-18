@@ -27,6 +27,7 @@ namespace CodingTest.Controllers
         [HttpPost]
         public ActionResult<GenericResponse<PaymentResponse>> ProcessPayment([FromBody] PaymentDto payment)
         {
+            // Model is Automatically validated using ActionValidationFilter Class in Helpers
             try
             {
 
