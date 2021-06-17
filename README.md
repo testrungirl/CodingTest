@@ -8,4 +8,4 @@
 6. Uses Swagger Docs
 7. Payment Gateways services (ICheapPaymentGateWay and IExpensivePayment Gateway are Simulated)
 8. MSTest for Unit Testing
-9. URL: https://filedcodingtest.azurewebsites.net
+9. URL: https://codingtest20210617111605.azurewebsites.net/index.html
