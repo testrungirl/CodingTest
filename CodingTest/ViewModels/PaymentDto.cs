@@ -18,7 +18,7 @@ namespace CodingTest.ViewModels
         [DataType(DataType.Date)]
         [PresentOrFutureDate]
         public DateTime ExpirationDate { get; set; }
-        [RegularExpression("/^(.{0}|.{3,})$/", ErrorMessage ="Please enter a 3 digit code or leave empty")]
+        //[RegularExpression("/^(.{0}|.{3,})$/", ErrorMessage ="Please enter a 3 digit code or leave empty")]
         public string SecurityCode { get; set; }
         [Required]
         [Range(0.01, double.PositiveInfinity, ErrorMessage = "Amount must be a positive value")]

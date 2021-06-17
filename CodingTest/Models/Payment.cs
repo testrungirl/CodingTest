@@ -23,7 +23,7 @@ namespace CodingTest.Models
         [PresentOrFutureDate]
         public DateTime ExpirationDate { get; set; }
 
-        [RegularExpression("/^(.{0}|.{3,})$/")]
+        //[RegularExpression("/^(.{0}|.{3,})$/")]
         public string SecurityCode { get; set; }
         [Required]
         [Range(0.01, double.PositiveInfinity, ErrorMessage = "Amount must be a positive value")]

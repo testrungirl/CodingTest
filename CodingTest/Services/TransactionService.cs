@@ -25,6 +25,10 @@ namespace CodingTest.Services
 
             try
             {
+                if (!(model.SecurityCode.All(char.IsDigit) && (model.SecurityCode.Length == 3 || model.SecurityCode == "")))
+                {
+                    return new GenericResponse<PaymentResponse> { Data = null, Message = "Please enter a 3 digit code or leave empty", Success = false };
+                }
 
                 States states = States.NotStarted;
                 if (model.Amount < 20)
